@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\SeikaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[SeikaController::class,'index']);
+Route::get('/fishes/create',[SeikaController::class,'create']);
+
+Route::get('/fishes/{fish}', [SeikaController::class,'show']);
+Route::post('/fishes',[SeikaController::class,'store']);
+
+Route::get('/fishes/{fish}/edit', [SeikaController::class, 'edit']);
+Route::put('/fishes/{fish}', [SeikaController::class, 'update']);
+
+Route::delete('/fishes/{fish}', [SeikaController::class,'delete']);
