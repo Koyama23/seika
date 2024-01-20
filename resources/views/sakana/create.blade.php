@@ -10,23 +10,23 @@
           @csrf
           <div class="name">
               <h2>魚名</h2>
-              <input type="text" name="fish[name]" placeholder="カタカナ魚名">
+              <input type="text" name="fish[name]" placeholder="カタカナ魚名" style="width:100px">
           </div>
            <div class="season">
               <h2>旬の時期</h2>
-              <input type="text" name="fish[season]" placeholder="春～夏">
+              <input type="text" name="fish[season]" placeholder="春～夏" style="width:100px">
           </div>
            <div class="price">
               <h2>価格帯</h2>
-              <input type="text" name="fish[price]" placeholder="高or中or安">
+              <input type="text" name="fish[price]" placeholder="高or中or安" style="width:100px">
           </div>
            <div class="eat">
               <h2>食べ方</h2>
-              <input type="text" name="fish[eat]" placeholder="焼き、煮付け">
+              <input type="text" name="fish[eat]" placeholder="焼き、煮付け" style="width:100px">
           </div>
            <div class="habitat">
               <h2>生息域</h2>
-              <input type="text" name="fish[habitat]" placeholder="西太平洋、インド洋の熱帯・温帯域">
+              <input type="text" name="fish[habitat]" placeholder="西太平洋、インド洋の熱帯・温帯域" style="width:100px">
           </div>
           <div>
              <input type="submit" value="登録">   

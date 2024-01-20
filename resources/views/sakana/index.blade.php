@@ -19,6 +19,7 @@
          <button type="button" onclick="deleteFish({{ $fish->id }})">削除</button> 
         </form>
         @endforeach
+        
         <div class='paginate'>{{ $fishes->links()}}</div>
         <script>
              function deleteFish(id){
