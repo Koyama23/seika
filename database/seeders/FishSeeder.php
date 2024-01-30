@@ -268,7 +268,7 @@ class FishSeeder extends Seeder
                 'season' => '秋～春',
                 'price' => '中',
                 'eat' => '焼き、煮つけ',
-                'habitat' => '日本（北海道南部の以南、朝鮮半島、台湾',
+                'habitat' => '日本（北海道南部の以南）、朝鮮半島、台湾',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
          ],

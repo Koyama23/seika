@@ -3,15 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\SeikaRequest;
 use App\Models\Fishes;
 
 class SeikaController extends Controller
 {
   public function index(Fishes $fish)
-  {
-     return view('sakana/index')->with(['fishes'=>$fish->getPaginateByLimit()]);
+{
+    return view('sakana/index')->with(['fishes' => $fish->getByLimit()]);
+}
+
+  // public function index(Fishes $fish)
+  // {
+  //   return view('sakana/index')->with(['fishes'=>$fish->getPaginateByLimit()]);
       
-  }
+  // }
   
   public function show(Fishes $fish)
   {
@@ -23,7 +29,7 @@ class SeikaController extends Controller
     return view('sakana/create');
   }
   
-  public function store(Request $request,Fishes $fish)
+  public function store(SeikaRequest $request,Fishes $fish)
   {
     $input = $request['fish'];
     $fish->fill($input)->save();
