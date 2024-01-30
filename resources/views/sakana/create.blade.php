@@ -153,6 +153,7 @@
           @csrf
           <div class="name">
               <h2>魚名</h2>
+
               <input type="text" name="fish[name]" placeholder="カタカナ魚名" value={{ old('fish.name' )}}>
                 <p class="name" style="color:red">{{ $errors->first('fish.name') }}</p>
           </div>
@@ -175,6 +176,8 @@
               <h2>生息域</h2>
               <input type="text" name="fish[habitat]" placeholder="西太平洋、インド洋の熱帯・温帯域" value={{ old('fish.habitat' )}}>
                 <p class="habitat" style="color:red">{{ $errors->first('fish.habitat') }}</p>
+
+      
           </div>
           <div>
              <input type="submit" value="登録">   
