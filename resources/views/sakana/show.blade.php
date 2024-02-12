@@ -54,7 +54,7 @@
         margin: 0 auto; /* 水平方向に中央揃えに設定 */
     }
     <?php
-             $image_dir = "/sakanapicture/";
+             $image_dir = "/storage/";
              $path = $image_dir.$fish->image;
     ?>
 </style>
@@ -68,7 +68,7 @@
              <p class=layout>価格帯</p><h2 class='price'>{{$fish->price}}</h2>
              <p class=layout>食べ方</p><h2 class='eat'>{{$fish->eat}}</h2>
              <p class=layout>生息域</p><h2 class='habitat'>{{$fish->habitat}}</h2>
-             <p class=layout>魚の写真</p> <img src="{{asset($path)}} alt="tstCode" /> <h2 class='image'></h2>
+             <p class=layout>魚の写真</p><h2 class='image'><img src={{$path}} alt="tstCode" width="400" height="300"/></h2>
             </font>
          </div>
          <div class='edit'>
