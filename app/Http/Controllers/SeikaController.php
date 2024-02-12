@@ -31,11 +31,17 @@ class SeikaController extends Controller
   
   public function store(SeikaRequest $request,Fishes $fish)
   {
+    $dir = 'sakanapicture';
     $input = $request['fish'];
+    echo $input['image'];
+    $file = $input['image'];
+    $file_name = $file->getClientOriginalName();
+    $input['image'] = $file_name;
+    $file->storeAs('public/' . $dir,$file_name);
     $fish->fill($input)->save();
   
     return redirect('/fishes/'. $fish->id);
-    }
+  }
     
   public function edit(Fishes $fish)
   {
@@ -57,5 +63,6 @@ class SeikaController extends Controller
   }
 
 }
+
 
   

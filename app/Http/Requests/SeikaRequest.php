@@ -20,6 +20,7 @@ class SeikaRequest extends FormRequest
         'fish.price' => 'required|string|max:1',
         'fish.eat' => 'required|string|max:15',
         'fish.habitat' => 'required|string|max:30',
+        'fish.image' => 'required',
         ];
     }
 }

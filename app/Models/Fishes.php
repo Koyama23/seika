@@ -16,6 +16,7 @@ class Fishes extends Model
     'price',
     'eat',
     'habitat',
+    'image',
 ];
 
 public function getByLimit()

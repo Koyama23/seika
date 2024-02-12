@@ -149,7 +149,7 @@
     
     <body>
         <h1>魚の情報</h1>
-      <form action="/fishes" method="POST">
+      <form action="/fishes" method="POST" enctype="multipart/form-data">
           @csrf
           <div class="name">
               <h2>魚名</h2>
@@ -176,13 +176,13 @@
               <h2>生息域</h2>
               <input type="text" name="fish[habitat]" placeholder="西太平洋、インド洋の熱帯・温帯域" value={{ old('fish.habitat' )}}>
                 <p class="habitat" style="color:red">{{ $errors->first('fish.habitat') }}</p>
-
-      
-          </div>
-          <div>
-             <input type="submit" value="登録">   
-          </div>
+            </div>
+            
+            <h1>画像アップロード</h1>
+            <input type="file" name="fish[image]" value={ fish[image] }>
+            <input type="submit" name=regist value="登録">
       </form>
+        
          <div class='footer'>
              <a href='/'>戻る</a>
          </div>
