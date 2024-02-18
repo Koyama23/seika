@@ -14,7 +14,7 @@
          }
         
         .name {
-            margin-bottom: 40px; /* 下側のマージンを追加 */
+            margin-bottom: 20px; /* 下側のマージンを追加 */
             text-align: center;
         }
 
@@ -35,7 +35,7 @@
         
         
         .season {
-            margin-bottom: 40px; /* 下側のマージンを追加 */
+            margin-bottom: 20px; /* 下側のマージンを追加 */
             text-align: center;
         }
 
@@ -55,7 +55,7 @@
         }
     
         .price {
-            margin-bottom: 40px; /* 下側のマージンを追加 */
+            margin-bottom: 20px; /* 下側のマージンを追加 */
             text-align: center;
         }
 
@@ -75,7 +75,7 @@
         }
     
         .eat {
-            margin-bottom: 40px; /* 下側のマージンを追加 */
+            margin-bottom: 20px; /* 下側のマージンを追加 */
             text-align: center;
         }
 
@@ -95,7 +95,7 @@
         }
     
         .habitat {
-            margin-bottom: 40px; /* 下側のマージンを追加 */
+            margin-bottom: 20px; /* 下側のマージンを追加 */
             text-align: center;
         }
 
@@ -130,6 +130,7 @@
             border: none; /* ボーダーをなくす */
             border-radius: 5px; /* 角を丸くする */
             cursor: pointer; /* カーソルをポインターに設定 */
+            margin-top: 20px;
         }
 
         /* フッターのスタイル */
@@ -154,31 +155,26 @@
           <div class="name">
               <h2>魚名</h2>
 
-              <input type="text" name="fish[name]" placeholder="カタカナ魚名" value={{ old('fish.name' )}}>
-                <p class="name" style="color:red">{{ $errors->first('fish.name') }}</p>
+              <input type="text" name="fish[name]" placeholder="カタカナ魚名" required value={{ old('fish.name' )}} >
           </div>
            <div class="season">
               <h2>旬の時期</h2>
-              <input type="text" name="fish[season]" placeholder="春～夏" value={{ old('fish.season' )}}>
-                <p class="season" style="color:red">{{ $errors->first('fish.season') }}</p>
+              <input type="text" name="fish[season]" placeholder="春～夏" required value={{ old('fish.season' )}}>
           </div>
            <div class="price">
               <h2>価格帯</h2>
-              <input type="text" name="fish[price]" placeholder="高or中or安" value={{ old('fish.price' )}}>
-                <p class="price" style="color:red">{{ $errors->first('fish.price') }}</p>
+              <input type="text" name="fish[price]" placeholder="高or中or安" required value={{ old('fish.price' )}}>
           </div>
            <div class="eat">
               <h2>食べ方</h2>
-              <input type="text" name="fish[eat]" placeholder="焼き、煮付け" value={{ old('fish.eat' )}}>
-                <p class="eat" style="color:red">{{ $errors->first('fish.eat') }}</p>
+              <input type="text" name="fish[eat]" placeholder="焼き、煮付け" required value={{ old('fish.eat' )}}>
           </div>
            <div class="habitat">
               <h2>生息域</h2>
-              <input type="text" name="fish[habitat]" placeholder="西太平洋、インド洋の熱帯・温帯域" value={{ old('fish.habitat' )}}>
-                <p class="habitat" style="color:red">{{ $errors->first('fish.habitat') }}</p>
+              <input type="text" name="fish[habitat]" placeholder="西太平洋、インド洋の熱帯・温帯域" required value={{ old('fish.habitat' )}}>
             </div>
             
-            <h1>画像アップロード</h1>
+            <h2>画像アップロード</h2>
             <input type="file" name="fish[image]" value={ fish[image] }>
             <input type="submit" name=regist value="登録">
       </form>
