@@ -48,11 +48,20 @@ class SeikaController extends Controller
   public function edit(Fishes $fish)
   {
     return view('sakana.edit')->with(['fish' => $fish]);
+    
   }
   
   public function update(Request $request, Fishes $fish)
   {
     $input_fish = $request['fish'];
+    if(isset($input_fish['image']))
+    {
+    $dir = '/';
+    $file = $input_fish['image'];
+    $file_name = $file->getClientOriginalName();
+    $input_fish['image'] = $file_name;
+    $file->storeAs('public' . $dir,$file_name);
+    }
     $fish->fill($input_fish)->save();
 
     return redirect('/fishes/' . $fish->id);

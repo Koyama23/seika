@@ -147,7 +147,7 @@
                   </head>
     <body>
         <h1>魚の情報</h1>
-      <form action="/fishes/{{ $fish->id }}" method="POST">
+      <form action="/fishes/{{ $fish->id }}" method="POST" enctype="multipart/form-data">
           @csrf
           @method('PUT')
           <div class='content_name'>
