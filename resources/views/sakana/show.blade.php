@@ -55,7 +55,14 @@
     }
     <?php
              $image_dir = "/storage/";
-             $path = $image_dir.$fish->image;
+             $default_image = "default.JPG";
+             if(isset($fish->image))
+             {
+             $default_image = $fish->image;
+             /*default_imageに保存したファイル名が入る
+             sample01.jpgなど*/
+             }
+             $path = $image_dir.$default_image
     ?>
 </style>
         </head>
